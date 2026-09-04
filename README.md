@@ -1,15 +1,8 @@
 # coisas-importantes
 
-Dois apps pessoais, 100% estáticos (HTML + CSS + JavaScript) — sem PHP,
-sem banco de dados. Os dados ficam salvos no `localStorage` do próprio
-navegador.
-
-- **Painel de tarefas** (`index.html`): tema preto e amarelo, tópicos com
-  itens e prazos.
-- **Contador de Calorias** (`calorias/index.html`): cadastro de perfil,
-  cálculo de TMB/GET (Mifflin-St Jeor), meta calórica diária e diário de
-  peso/calorias com histórico. Tem um link de volta para o painel de
-  tarefas, e o painel tem um botão para abrir o contador de calorias.
+Painel pessoal de tarefas, tema preto e amarelo. Site 100% estático
+(HTML + CSS + JavaScript) — sem PHP, sem banco de dados. Os dados ficam
+salvos no `localStorage` do próprio navegador.
 
 ## Rodando
 
