@@ -256,3 +256,110 @@ td {
     background: #00e676 !important;
     color: #000000 !important;
 }
+
+.item-concluido {
+    color: #888888 !important;
+    text-decoration: line-through;
+}
+
+.data-item {
+    display: block;
+    color: #888888 !important;
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.empty-state {
+    color: #888888 !important;
+    text-align: center;
+    padding: 16px 0 !important;
+    font-size: 0.9rem;
+}
+
+.btn-excluir-item {
+    color: #ff4444 !important;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 4px;
+}
+
+/* ==========================================================================
+   7. FORMULÁRIOS INLINE E PRAZO
+   ========================================================================== */
+.form-inline {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.prazo-linha {
+    margin-bottom: 12px;
+}
+
+.prazo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.prazo-datas {
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.prazo-ok {
+    background: var(--success-bg) !important;
+    color: var(--success-text) !important;
+}
+
+.prazo-atencao {
+    background: var(--warning-bg) !important;
+    color: var(--warning-text) !important;
+}
+
+.prazo-vencido {
+    background: var(--danger-bg) !important;
+    color: var(--danger) !important;
+}
+
+/* ==========================================================================
+   8. RESPONSIVO / MOBILE
+   ========================================================================== */
+@media (max-width: 650px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .header-box {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-inline input[type="text"],
+    .form-inline input[type="date"] {
+        width: 100% !important;
+    }
+}

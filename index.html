@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPORTANTE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header-box">
+            <div class="header-title">
+                <h1>Apenas comece</h1>
+                <p>Seu painel pessoal de tarefas e lembretes</p>
+            </div>
+
+            <div class="header-actions">
+                <button type="button" id="btn-toggle-concluidos" class="btn btn-secondary">
+                    Mostrar Concluídos
+                </button>
+
+                <form id="form-criar-topico" class="form-inline" style="gap: 8px;">
+                    <input type="text" id="input-nome-topico" placeholder="Novo Tópico..." required style="width: 160px;">
+                    <input type="date" id="input-data-inicio" title="Data de início (padrão: hoje)">
+                    <input type="date" id="input-data-limite" title="Data de término (opcional)">
+                    <button type="submit">➕ Criar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- GRID DE TÓPICOS -->
+        <div class="grid-container" id="grid-topicos"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
