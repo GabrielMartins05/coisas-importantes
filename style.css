@@ -89,6 +89,21 @@ body::before {
     border: 1px solid #2b2b2b !important;
 }
 
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid #2b2b2b !important;
+}
+
 .header-title h1 {
     font-size: 1.6rem;
     font-weight: 700;
