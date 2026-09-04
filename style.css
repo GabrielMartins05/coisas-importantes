@@ -1,0 +1,258 @@
+/* ==========================================================================
+   1. VARIÁVEIS - FORÇADO AMARELO E PRETO
+   ========================================================================== */
+:root {
+    --bg-main: #000000 !important;
+    --card-bg: #121212 !important;
+    --text-main: #ffffff !important;
+    --text-muted: #888888 !important;
+    --text-sub: #ffe500 !important;
+
+    --primary: #ffe500 !important;
+    --primary-hover: #d4be00 !important;
+
+    --success-bg: #1a1a00 !important;
+    --success-text: #ffe500 !important;
+
+    --warning-bg: #332b00 !important;
+    --warning-text: #ffd700 !important;
+
+    --danger: #ff4444 !important;
+    --danger-bg: rgba(255, 68, 68, 0.2) !important;
+
+    --border-color: #2b2b2b !important;
+    --shadow: 0px 18px 40px rgba(0, 0, 0, 0.9) !important;
+    --radius: 16px;
+    --transition: all 0.2s ease-in-out;
+}
+
+/* ==========================================================================
+   2. RESET E ESTILOS BASE
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    transition: var(--transition);
+}
+
+body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.05 !important;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO / HEADER
+   ========================================================================== */
+.header-box {
+    background: #121212 !important;
+    padding: 24px 32px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 32px;
+    border: 1px solid #2b2b2b !important;
+}
+
+.header-title h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffe500 !important;
+}
+
+.header-title p {
+    margin-top: 4px;
+    color: #888888 !important;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   4. FORMULÁRIOS & BOTÕES
+   ========================================================================== */
+input[type="text"],
+input[type="date"] {
+    background: #1e1e1e !important;
+    border: 1px solid #2b2b2b !important;
+    color: #ffffff !important;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #ffe500 !important;
+    box-shadow: 0 0 0 3px rgba(255, 229, 0, 0.2) !important;
+}
+
+button, .btn {
+    background: #ffe500 !important;
+    color: #000000 !important; /* Texto preto sobre amarelo */
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+button:hover, .btn:hover {
+    background: #d4be00 !important;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: #222222 !important;
+    color: #ffffff !important;
+    border: 1px solid #2b2b2b !important;
+}
+
+.btn-secondary:hover {
+    background: #333333 !important;
+    color: #ffe500 !important;
+}
+
+/* ==========================================================================
+   5. CARDS E GRID
+   ========================================================================== */
+.grid-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px;
+    width: 100%;
+    padding-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+    .grid-container { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+@media (max-width: 650px) {
+    .grid-container { grid-template-columns: 1fr !important; }
+}
+
+.card {
+    position: relative;
+    background: #121212 !important;
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    flex: none !important;
+    border: 1px solid #2b2b2b !important;
+}
+
+.btn-del-topico {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 32px;
+    height: 32px;
+    background: #121212 !important;
+    color: #ff4444 !important;
+    border: 1px solid #2b2b2b !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #2b2b2b !important;
+}
+
+.card-header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   6. TABELA E ITENS
+   ========================================================================== */
+table { width: 100%; border-collapse: collapse; }
+
+td {
+    padding: 12px 0;
+    border-bottom: 1px solid #2b2b2b !important;
+    vertical-align: middle;
+}
+
+.item-input {
+    background: transparent !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.badge-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+/* Botões Fazer e Feito */
+.status-0 {
+    background: #ffe500 !important;
+    color: #000000 !important;
+}
+
+.status-1 {
+    background: #00e676 !important;
+    color: #000000 !important;
+}
